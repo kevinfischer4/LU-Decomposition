@@ -44,19 +44,6 @@ void test_usage()
     printf("Beispiel: ./main -t1\n");
 }
 
-<<<<<<< HEAD
-// load matrix from file and return the pointer to the matrix
-float *load_matrix(const char *filename)
-{
-    // open file
-    FILE *file = fopen(filename, "r");
-    // check for invalid file
-    if (file == NULL)
-    {
-        printf("Load_matrix_Error opening file!\n");
-        exit(EXIT_FAILURE);
-    }
-=======
 // load matrix from file and return the pointer to the matrix
 float *load_matrix(const char *filename)
 {
@@ -69,7 +56,6 @@ float *load_matrix(const char *filename)
         printf("Load_matrix_Error opening file : \"%s\"!\n", filename);
         exit(EXIT_FAILURE);
     }
->>>>>>> refs/remotes/origin/master
 
     // get size of matrix
     size_t n = 0;
@@ -117,21 +103,12 @@ float *load_matrix(const char *filename)
 void save_matrix(const char *filename, float *A, size_t n)
 {
 
-<<<<<<< HEAD
-    // copy matrix to file
-    FILE *file = fopen(filename, "w+");
-    // check for invalid file
-    if (file == NULL)
-    {
-        printf("Save_matrix_error opening file!\n");
-=======
     // copy matrix to file
     FILE *file = fopen(filename, "w+");
     // check for invalid file
     if (file == NULL)
     {
         printf("Save_matrix_error opening file: \"%s\"!\n", filename);
->>>>>>> refs/remotes/origin/master
         exit(EXIT_FAILURE);
     }
 
@@ -154,6 +131,7 @@ void save_matrix(const char *filename, float *A, size_t n)
 
 void save_output_matrix(const char *filename, const float *L, const float *U, size_t n)
 {
+
     // copy matrix to file
     FILE *file = fopen(filename, "w+");
     // check for invalid file
@@ -270,7 +248,6 @@ size_t getSizeMatrix(char *filename)
     // open file
     FILE *file = fopen(filename, "r");
     // check for invalid file
-
     if (file == NULL)
     {
         printf("getSizeMatrix_error opening file: \"%s\"!\n", filename);
